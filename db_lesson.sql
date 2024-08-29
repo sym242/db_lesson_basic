@@ -75,7 +75,9 @@ Q9
 SELECT AVG(age) AS average_age FROM people WHERE department_id = 2 AND gender = 2;
 
 Q10
-SELECT people.name,people.department_id,reports.content FROM people INNER JOIN reports ON
+SELECT people.name,departments.name,reports.content FROM people 
+INNER JOIN departments ON 
+people.department_id = departments.department_id INNER JOIN reports ON
 people.person_id = reports.person_id;
 
 Q11
