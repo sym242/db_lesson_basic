@@ -78,7 +78,8 @@ Q10
 SELECT people.name,departments.name,reports.content FROM people 
 INNER JOIN departments ON 
 people.department_id = departments.department_id INNER JOIN reports ON
-people.person_id = reports.person_id;
+people.person_id = reports.person_id
+INNER JOIN departments ON people.department_id = departments.department_id; 
 
 Q11
 SELECT name FROM people LEFT OUTER JOIN reports ON
